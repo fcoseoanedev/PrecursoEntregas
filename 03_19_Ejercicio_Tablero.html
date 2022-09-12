@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio Tablero</title>
+</head>
+
+<body>
+    <script>
+
+        // Dimensiones tablero
+        let altura = parseInt(prompt("¿Que altura tendrá el tablero?"));
+        let anchura = parseInt(prompt("¿Que anchura tendrá el tablero?"));
+
+        // Patrones dibujo tablero
+        let patron  = "";
+        let patron1 = "X";
+        let patron2 = "O";
+
+        // Tablero
+        let tablero = "";
+
+        // Solo se dibuja el tablero si las dimensiones son válidas
+        if (altura <= 0 || anchura <= 0) {
+            console.log("La altura y la anchura deben de ser mayores de 0.");  
+        } else {
+            for (let i = 1; i <= altura; i++) {
+                // Inicializamos tablero
+                tablero = "";
+                // Determinamos el patrón del primer elemento de la línea
+                if (i % 2 == 0) {
+                    patron = patron1;
+                } else {
+                    patron = patron2;
+                }
+                // Componemos línea
+                for (let j = 1; j <= anchura; j++) {
+                    tablero = tablero + patron;
+                    if (patron == patron1) {
+                        patron = patron2;
+                    } else {
+                        patron = patron1;
+                    };
+                };
+                // Dibujamos línea
+                console.log(tablero);
+            };    
+        };
+
+    </script>
+</body>
+
+</html>
