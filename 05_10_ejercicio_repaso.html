@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        * Crear un array de 10 números. Usar un for para asignar los valores de 20 a 11 a las 10 posiciones
+        * (en orden descendente). Usar un for para mostrar los 10 valores en pantalla.
+        */
+
+        let Tamaño          = 10;  // Usaremos valores reales en la configuración
+                                   // luego se ajustarán para trabajar con los Arrays en JS.
+        let ValorInicial    = 10;
+
+        let Tabla = [Tamaño-1];
+
+        for (let Posicion = Tamaño - 1; Posicion >= 0; Posicion--) {
+            ValorInicial = ValorInicial + 1;
+            Tabla[Posicion] = ValorInicial;            
+        };  
+        
+        console.log("Valores Tabla completa : " + Tabla);
+
+        for (let Posicion = 0 ; Posicion < Tamaño; Posicion++) {
+            console.log("Valor posición " + Posicion + " : " + Tabla[Posicion]);
+        };
+
+    </script>
+</body>
+
+</html>
