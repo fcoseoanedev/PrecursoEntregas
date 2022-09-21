@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        * Haz un programa que realice la media de los valores que contiene un array de 10 int y lo muestre por consola. No es necesario pedir los números al usuario.
+        * Pista:
+        * Podemos ir sumando en cada vuelta del bucle cada valor de cada posición del array.
+        */
+        
+        let Tamaño = 10;  // Se ajustara mas tarde el tamaño para trabajar con JS.
+        let sumaTotal = 0;
+        let tablaDatos = [Tamaño-1];
+
+        for (let IndiceActual = 0 ; IndiceActual < Tamaño; IndiceActual++) {            
+            tablaDatos[IndiceActual] = IndiceActual * 5;  // asignación valor
+            sumaTotal = sumaTotal + tablaDatos[IndiceActual];
+        };
+
+        console.log("Valores Tabla completa : " + tablaDatos);
+        console.log("Media de valores :" + (sumaTotal/tablaDatos.length));
+
+    </script>
+</body>
+
+</html>
