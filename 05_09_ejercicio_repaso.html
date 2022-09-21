@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        * Crear un array vacío. Pedir al usuario 3 veces que escriba un string. Guardar cada uno de esos strings en la posición 0 , 1 y 2.
+        * Mostrar en pantalla en el orden: primero posición 1, después posición 2 y por último posición 0.
+        * Pista:
+        * Puedes utilizar un bucle para ir pedir una palabra al usuario e introducirlo en cada una de las posiciones del array.
+        */
+
+        let datosUsuario = [];        
+        let ValorMax = 3;
+
+        for (let ValorActual = 0 ; ValorActual < ValorMax; ValorActual++) {
+            datosUsuario[ValorActual] = prompt("Proporcione un número:");
+        };
+
+        console.log("Valores introducidos por Usuario : " + datosUsuario);
+
+        console.log("Valor posición 1:" + datosUsuario[1]);
+        console.log("Valor posición 2:" + datosUsuario[2]);
+        console.log("Valor posición 0:" + datosUsuario[0]);
+
+    </script>
+</body>
+
+</html>
