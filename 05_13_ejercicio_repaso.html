@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        * Crear un array de 11 ints. Pedir al usuario que introduzca valores entre 0 y 10. Cada vez que introduzca un dígito, añadir uno al valor en esa posición del array.
+        * Si por ejemplo introduce un 3, sumar uno a la posición 3. Mostrar en pantalla los valores. Si introduce un número mayor que 10, decir que ese número es incorrecto.
+        * Si introduce un número negativo, mostrar en pantalla el número de cada posición y el valor que contiene. Por ejemplo, si introduce 7, 7, 7, 5, 6, 5, 9, 9, 10, -1 mostrar:
+        * 0
+        * 1	0
+        * 2	0
+        * 3	0
+        * 4	0
+        * 5	2
+        * 6	1
+        * 7	3
+        * 9	2
+        * 10 1
+        */
+
+        let tamaño = 11;
+        let valorCorte = tamaño - 1;
+        let tablaValores = [tamaño];
+        let valor = 0;        
+
+        // Inicializar valores para tabla
+        for (valor = 0 ; valor <= valorCorte; valor ++) {
+            tablaValores[valor]  = 0;
+        };
+
+        do {
+
+            valor = parseInt(prompt("Introduzca un número menor o igual que "+ valorCorte));
+            console.log(valor);
+            
+            if (isNaN(valor) == true) {  // valor debe de ser númerico
+                    valor = 0;                    
+            } else {
+                    if (valor > valorCorte) {
+                        console.log("Valor debe ser menor o igual que "+ valorCorte);
+                    } else {
+                        if (valor >= 0 ) {
+                        tablaValores[valor]  = tablaValores[valor] + 1;                
+                        };
+                    };
+            };
+
+        } while (valor >= 0);
+
+        // Solo podría salir del bucle con valor negativo
+        for (valor = 0 ; valor <= valorCorte;  valor ++) {
+            console.log ("Valor para posición " + valor + "  " + tablaValores[valor]);
+        };
+
+    </script>
+</body>
+
+</html>
